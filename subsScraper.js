@@ -6,7 +6,7 @@ const streamz = require('streamz');
 const langs = require('./langs.json')
 const {groupBy} = require('lodash')
 
-const uri = 'https://www.yts-subtitle.com/movie-imdb'
+const uri = 'https://yifysub.org//movie-imdb'
 const scrape = imdbId => {
 	return got(`${uri}/${imdbId}`)
   .then(res => cheerio.load(res.body))
